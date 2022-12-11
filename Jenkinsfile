@@ -7,4 +7,9 @@ pipeline {
       }
     }
   }
+    stage('build package') {
+      steps {
+        ssh "mvn clean package"
+      }
+    }
 }    
