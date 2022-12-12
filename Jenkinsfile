@@ -7,4 +7,9 @@ pipeline {
       }
     }
   }
+    stage('Build Package') {
+      step {
+        sh 'mvn clean package'
+      }
+    }
 } 
