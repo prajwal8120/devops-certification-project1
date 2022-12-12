@@ -4,8 +4,10 @@ pipeline {
     stage('checkout the project') {
       steps {
         git 'https://github.com/prajwal8120/devops-certification-project1.git'
-        sh 'mvn clean package'
       }
+        steps {
+            sh 'mvn clean package'
     }
+   }
   }
 }
