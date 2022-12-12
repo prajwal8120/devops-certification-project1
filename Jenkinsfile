@@ -1,15 +1,10 @@
 pipeline {
-    agent any 
-    stage{
-    stage('checkout the project') {
+  stages {
+    stage('GitHub Jenkins Ant Docker Build') {
       steps {
         git 'https://github.com/prajwal8120/devops-certification-project1.git'
-      }
-    }
-  }
-    stage('Build Package') {
-      steps {
         sh 'mvn clean package'
       }
     }
-} 
+  }
+}
